@@ -2,3 +2,5 @@
 target/
 *.iml
 apache-tomcat-*
+Icon?
+.DS_Store/
