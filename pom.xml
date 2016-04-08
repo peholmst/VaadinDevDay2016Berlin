@@ -53,5 +53,6 @@
         <module>timer-sample</module>
         <module>threadpool-sample</module>
         <module>polling-sample</module>
+        <module>commands</module>
     </modules>
 </project>

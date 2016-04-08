@@ -67,7 +67,7 @@ public class MyUI extends UI {
 
         @Override
         public void contextDestroyed(ServletContextEvent sce) {
-            // executorService.shutdown(); // What happens if we forget this line and redeploy?
+            executorService.shutdown();
         }
     }
 }
