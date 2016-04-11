@@ -40,6 +40,7 @@ public class MyUI extends UI {
         setContent(layout);
 
         HorizontalLayout filterBar = new HorizontalLayout();
+        filterBar.setWidth("100%");
         filterBar.setSpacing(true);
         layout.addComponent(filterBar);
 
@@ -50,6 +51,11 @@ public class MyUI extends UI {
         Button filter = new Button("Find Patients", this::find);
         filterBar.addComponent(filter);
         filterBar.setComponentAlignment(filter, Alignment.BOTTOM_LEFT);
+
+        Button openLongRunning = new Button("Long Running Operation", evt -> getUI().addWindow(new MyLongRunningWindow()));
+        filterBar.addComponent(openLongRunning);
+        filterBar.setComponentAlignment(openLongRunning, Alignment.BOTTOM_RIGHT);
+        filterBar.setExpandRatio(openLongRunning, 1.0f);
 
         patientContainer = new BeanItemContainer<>(Patient.class);
         Grid patientGrid = new Grid(patientContainer);

@@ -1,1 +1,3 @@
 org.vaadin.petter.devday.commands.domain.CreatePatientHandler
+org.vaadin.petter.devday.commands.longrunning.AnswerQuestionHandler
+org.vaadin.petter.devday.commands.longrunning.StartConversationHandler
